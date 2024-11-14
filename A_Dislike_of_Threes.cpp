@@ -7,16 +7,20 @@ int main()
     cin >> times;
     while (times--)
     {
-        int n;
-        cin >> n;
-        int newStarting = n;
-        for (int i = newStarting;; i++)
+        int k;
+        cin >> k;
+        int count = 0;
+        int num = 0;
+
+        for (int i = 1; count < k; i++)
         {
-            if (n % 3 != 0 || n % 10 == 3)
+            if (i % 10 != 3 && i % 3 != 0)
             {
+                count++;
+                num = i;
             }
         }
+        cout << num << endl;
     }
-
     return 0;
 }
